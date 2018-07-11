@@ -1,0 +1,3 @@
+/home/wangqi/Desktop/Play-a-bomb/build/CMakeFiles/rebuild_cache.dir
+/home/wangqi/Desktop/Play-a-bomb/build/CMakeFiles/edit_cache.dir
+/home/wangqi/Desktop/Play-a-bomb/build/CMakeFiles/project.dir

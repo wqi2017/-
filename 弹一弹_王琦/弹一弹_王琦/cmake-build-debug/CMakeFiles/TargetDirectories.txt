@@ -1,0 +1,3 @@
+/home/wangqi/Desktop/Play-a-bomb/弹一弹_王琦/弹一弹_王琦/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/wangqi/Desktop/Play-a-bomb/弹一弹_王琦/弹一弹_王琦/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/wangqi/Desktop/Play-a-bomb/弹一弹_王琦/弹一弹_王琦/cmake-build-debug/CMakeFiles/project.dir
