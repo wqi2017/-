@@ -41,16 +41,19 @@ int main()
             if(r<27&&r>23){
                 flag=false;
             }
-			if (r < 35 || r>100 ||(c.y<300&&(c.x>480||c.x<580)))continue;
+			if (r < 35 || r>100 ||c.y<300)continue;
 			Point c1; c1.x = (int)c.x;
 			c1.y = (int)c.y;
 			center.push_back(c1);
 			radius.push_back(r);
-			circle(image, c, r, Scalar(0, 0, 255), 1);
+			circle(image, c, r, Scalar(0, 0, 255), 5);
 		}
-        if(center.size()==0)center.push_back(last_aim);
+        if(center.size()==0){cout<<"size = 0"<<endl;center.push_back(last_aim);}
 		sort(center.begin(), center.end(), cmp);
-		string sx = to_string(center[0].x);
+        int offset_x=0;
+        if(center[0].x<300)offset_x=-20;
+        else if(center[0].x>700)offset_x=20;
+		string sx = to_string(center[0].x+offset_x);
 		string sy = to_string(center[0].y);
 		string scommand = "adb shell input tap " + sx + " " + sy;
 
@@ -61,8 +64,10 @@ int main()
             system(command);
             cout<<"clicked"<<endl;
             cout<<"cout<<\t"<<command<<endl;
-        }else cout<<"not click "<<endl;
-        system("adb shell input tap 950 1850");
+        }else {
+            cout<<"not click "<<endl;
+            //system("adb shell input tap 1000 1900");
+        }
         last_aim=center[0];
         resize(image,image,Size(300,400));
         imshow("screen",image);
